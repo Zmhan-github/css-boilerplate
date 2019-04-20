@@ -199,3 +199,39 @@ main {
 .media-item-body h4 {
   margin-top: 0;
 }
+
+/* nav */
+nav {
+  width: 1080px;
+  margin: 0 auto;
+}
+.site-nav {
+  display: flex;
+  background-color: #fff;
+  list-style-type: none;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.site-nav > li {
+  margin-top: 0;
+}
+
+.site-nav > li > a {
+  display: block;
+  padding: 0.5em 1em;
+  color: #0090c9;
+  text-decoration: none;
+}
+
+.site-nav > li > a:hover {
+  text-decoration: underline;
+}
+
+.site-nav > li + li {
+  margin-left: 1.5em;
+}
+
+.site-nav > .nav-right {
+  margin-left: auto;
+}
