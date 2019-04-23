@@ -28,6 +28,7 @@ header {
   display: flex;
   height: 70px;
   align-items: center;
+  justify-content: space-between;
 }
 
 header h1 {
@@ -182,7 +183,6 @@ main {
 /* new media-box */
 .media-item {
   padding: 1.5em;
-  background-color: #eee;
   border-radius: 0.5em;
 }
 
@@ -197,9 +197,12 @@ main {
 }
 
 .media-item-body h4 {
-  margin-top: 0;
+  margin: 0;
 }
 
+.media-item-body p {
+  margin-top: 0.5em;
+}
 /* nav */
 nav {
   width: 1080px;
@@ -278,4 +281,125 @@ nav {
   padding: 0.5em 1.5em;
   color: #0090c9;
   text-decoration: none;
+}
+
+/* login */
+.login-form h3 {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.login-form input:not([type="checkbox"]):not([type="radio"]) {
+  display: block;
+  margin-top: 0;
+  width: 100%;
+}
+
+.login-form button {
+  margin-top: 1em;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.centered {
+  text-align: center;
+}
+
+.cost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.7;
+}
+
+.cost > span {
+  margin-top: 0;
+}
+
+.cost-currency {
+  font-size: 2rem;
+}
+
+.cost-roubles {
+  font-size: 4rem;
+}
+
+.cost-kopecks {
+  font-size: 1.5rem;
+  align-self: flex-start;
+}
+
+.cta-button {
+  display: block;
+  background-color: #cc6b5a;
+  color: white;
+  padding: 0.6em 1em;
+  text-decoration: none;
+}
+
+.button-open {
+  background-color: white;
+  margin-top: 0;
+  padding: 0.6em 2em;
+  border: 1px solid #0072b0;
+  border-radius: 0.4em;
+  cursor: pointer;
+  position: relative;
+}
+
+.button-open-icon {
+  position: absolute;
+  left: 0.7em;
+  top: 0.7em;
+}
+
+/* modal */
+.modal {
+  display: none;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.modal-body {
+  position: fixed;
+  top: 3em;
+  bottom: 3em;
+  right: 20%;
+  left: 20%;
+  padding: 2em 3em;
+  background-color: white;
+  overflow: auto;
+  z-index: 100;
+}
+.modal-close {
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  padding: 0.3em;
+  cursor: pointer;
+  font-size: 2em;
+  height: 1em;
+  width: 1em;
+  text-indent: 10em;
+  overflow: hidden;
+  border: 0;
+}
+.modal-close::after {
+  position: absolute;
+  line-height: 0.5;
+  top: 0.2em;
+  left: 0.1em;
+  text-indent: 0;
+  content: "\00D7";
 }

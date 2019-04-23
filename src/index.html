@@ -15,6 +15,9 @@
   <body>
     <header>
       <h1>Бегущий город</h1>
+      <button id="open" class="button-open">
+        <i class="button-open-icon fas fa-envelope"></i>Подписаться
+      </button>
     </header>
     <nav>
       <ul class="site-nav">
@@ -95,7 +98,11 @@
         <div class="row">
           <div class="column-6">
             <div class="media-item">
-              <i class="media-item-image fas fa-exclamation"></i>
+              <img
+                class="media-item-image"
+                src="http://placehold.it/80x80"
+                alt="placehold"
+              />
               <div class="media-item-body">
                 <h4>Apolo</h4>
                 <p>
@@ -107,7 +114,11 @@
           </div>
           <div class="column-6">
             <div class="media-item">
-              <i class="media-item-image fas fa-exclamation"></i>
+              <img
+                class="media-item-image"
+                src="http://placehold.it/80x80"
+                alt="placehold"
+              />
               <div class="media-item-body">
                 <h4>Apolo</h4>
                 <p>
@@ -120,10 +131,66 @@
         </div>
       </div>
       <aside class="sidebar">
+        <form class="login-form">
+          <h3>Авторизация</h3>
+          <p>
+            <label for="username">
+              Логин:
+            </label>
+            <input
+              id="username"
+              type="text"
+              name="username"
+              maxlength="30"
+              required
+              autocomplete="off"
+            />
+          </p>
+          <p>
+            <label for="password">
+              Пароль:
+            </label>
+            <input
+              id="password"
+              type="password"
+              name="password"
+              required
+              maxlength="30"
+            />
+          </p>
+          <button>Войти</button>
+        </form>
+        <div class="centered">
+          <small>Тарифные планы от</small>
+          <div class="cost">
+            <span class="cost-currency">₽</span>
+            <span class="cost-roubles">999</span>
+            <span class="cost-kopecks">.00</span>
+          </div>
+          <a href="" class="cta-button">Зарегистрировать</a>
+        </div>
         <a href="/" class="btn-link">мы в twitter</a>
         <a href="/" class="btn-link">мы в facebook</a>
         <a href="/" class="sponsor-link">стать спонсором</a>
       </aside>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-body">
+        <button class="modal-close" id="close">закрыть</button>
+        <h2>Кофейные новости</h2>
+        <p>
+          Подпишитесь на нашу ежемесячную рассылку. Никакого спама. Мы
+          гарантируем!
+        </p>
+        <form>
+          <p>
+            <label for="email">Адрес email:</label>
+            <input type="text" name="email" />
+          </p>
+          <p><button type="submit">Подписаться</button></p>
+        </form>
+      </div>
     </div>
   </body>
 </html>
