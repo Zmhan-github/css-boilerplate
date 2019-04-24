@@ -7,11 +7,7 @@ btn.addEventListener('click', event => {
   modal.style.display = 'block'
 })
 
-close.addEventListener(
-  'click',
-
-  event => {
-    event.preventDefault()
-    modal.style.display = 'none'
-  }
-)
+close.addEventListener('click', event => {
+  event.preventDefault()
+  modal.style.display = 'none'
+})
