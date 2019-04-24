@@ -1,15 +1,23 @@
-# css boilerplate
+# Modern boilerplate
 
-> Шаблон на основе flexbox - верстки, нет поддержки IE9 и более старые версии
 
+
+Запустить проект:
+
+```
+git clone https://github.com/Zmhan-github/css-boilerplate.git
+```
+
+```
+npm install
+```
 ```
 npm run dev
 ```
 
-for development go to http://localhost:8080
-
+### Собрать сборку командой 
 ```
 npm run build
 ```
 
-for production /dist
+> Шаблон на основе flexbox - верстки, тут нет поддержки IE9 и более старые версии
