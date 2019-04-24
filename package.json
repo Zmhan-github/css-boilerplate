@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
     "dev": "webpack-dev-server --open --config webpack.config.dev.js",
+    "format": "pretty-quick",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Marat Zh",
@@ -25,6 +26,8 @@
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.30.0",
     "webpack-bundle-analyzer": "^3.3.2",
