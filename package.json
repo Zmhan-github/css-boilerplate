@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.prod.js",
+    "build": "webpack --config webpack.config.dev.js",
     "dev": "webpack-dev-server --open --config webpack.config.dev.js",
     "format": "pretty-quick",
     "lint": "eslint ./",
