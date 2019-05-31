@@ -13,7 +13,7 @@ var onKeyup = event => {
 
 var onSubmit = () => {
   event.preventDefault()
-  console.dir(state)
+  //   console.dir(state)
 }
 
 username.addEventListener('keyup', onKeyup)

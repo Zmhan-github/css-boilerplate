@@ -84,7 +84,7 @@ main {
 .clearfix::before,
 .clearfix::after {
   display: table;
-  content: " ";
+  content: ' ';
 }
 
 .clearfix::after {
@@ -132,12 +132,12 @@ main {
 }
 
 .row::after {
-  content: " ";
+  content: ' ';
   display: block;
   clear: both;
 }
 
-[class*="column-"] {
+[class*='column-'] {
   float: left;
   padding: 0 0.75em;
   margin-top: 0;
@@ -240,7 +240,7 @@ nav {
 }
 
 .dropdown-label::after {
-  content: " ";
+  content: ' ';
   position: absolute;
   right: 0;
   top: 1em;
@@ -292,7 +292,7 @@ nav {
   text-transform: uppercase;
 }
 
-.login-form input:not([type="checkbox"]):not([type="radio"]) {
+.login-form input:not([type='checkbox']):not([type='radio']) {
   display: block;
   margin-top: 0;
   width: 100%;
@@ -401,5 +401,5 @@ nav {
   top: 0.2em;
   left: 0.1em;
   text-indent: 0;
-  content: "\00D7";
+  content: '\00D7';
 }

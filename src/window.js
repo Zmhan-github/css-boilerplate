@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
+
 // Функция, которая при вызове может быть вызвана только по истечении определенного времени
 var debounce = (fn, ms) => {
   let timeout
