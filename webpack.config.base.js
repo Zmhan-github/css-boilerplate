@@ -1,46 +1,62 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-  entry: './src/main.coffee',
+  entry: {
+    main: ['./src/pages/main/main.js'],
+    users: ['./src/pages/users/users.js']
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'app.bundle.js'
+    filename: '[name]-bundle.js'
   },
   module: {
     rules: [
+      // Правила для JavaScript [ES6+]
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
-        options: {
-          presets: ['@babel/preset-env']
-        }
+        exclude: /node_modules/
       },
+      // Правила для CSS и SASS [Стили]
       {
-        test: /\.coffee$/,
+        test: /\.(s*)css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        exclude: /node_modules/
+      },
+      // Правила для HTML
+      {
+        test: /\.html$/,
+        use: ['html-loader']
+      },
+      // Правила для Картинок
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: 'coffee-loader',
+            loader: 'file-loader',
             options: {
-              transpile: {
-                presets: ['@babel/preset-env']
-              }
+              name: 'images/[name]-[hash:8].[ext]' // Используем Хэш [hash:8]
             }
           }
         ]
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-        exclude: /node_modules/
       }
     ]
   },
+
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/pages/main/index.html',
+      filename: 'index.html',
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/users/users.html',
+      filename: 'users.html',
+      chunks: ['users']
     })
   ]
 }

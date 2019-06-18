@@ -19,7 +19,7 @@ body {
 }
 
 body * + * {
-  margin-top: 1.5em;
+  margin-top: 1.5em; /* эффект лоботомированной совы */
 }
 
 main {

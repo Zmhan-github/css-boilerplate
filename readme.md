@@ -10,6 +10,8 @@ git clone https://github.com/Zmhan-github/css-boilerplate.git
 npm install
 ```
 
+### Запускать проект командой
+
 ```
 npm run dev
 ```
