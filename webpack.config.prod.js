@@ -6,6 +6,9 @@ const baseConfig = require('./webpack.config.base')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
+//js
+const MinifyPlugin = require('babel-minify-webpack-plugin')
+
 module.exports = merge(baseConfig, {
   mode: 'production',
   module: {
@@ -36,6 +39,7 @@ module.exports = merge(baseConfig, {
       analyzerMode: 'static',
       openAnalyzer: 'false',
       reportFilename: 'bundle_sizes.html'
-    })
+    }),
+    new MinifyPlugin()
   ]
 })
