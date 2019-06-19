@@ -22,7 +22,26 @@ module.exports = {
       // Правила для CSS и SASS [Стили]
       {
         test: /\.(s*)css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader' // translates CSS into CommonJS modules
+          },
+          {
+            loader: 'postcss-loader', // Run postcss actions
+            options: {
+              plugins: function() {
+                // postcss plugins, can be exported to postcss.config.js
+                return [require('autoprefixer')]
+              }
+            }
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ],
         exclude: /node_modules/
       },
       // Правила для HTML

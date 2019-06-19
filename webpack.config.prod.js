@@ -23,6 +23,15 @@ module.exports = merge(baseConfig, {
             loader: 'css-loader'
           },
           {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function() {
+                // postcss plugins, can be exported to postcss.config.js
+                return [require('autoprefixer')]
+              }
+            }
+          },
+          {
             loader: 'sass-loader'
           }
         ],
