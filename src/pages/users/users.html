@@ -11,7 +11,7 @@
     <div id="app">
       <h1>Form Validation</h1>
 
-      <form @submit.prevent="submitForm" autocomplete="off">
+      <form @submit.prevent="login" autocomplete="off">
         <div class="form-group">
           <label for="name">Имя:</label>
           <input v-model="form.name" id="name" />
@@ -36,8 +36,17 @@
           </p>
         </div>
 
+        <div class="form-group">
+          <label for="age">Пароль:</label>
+          <input v-model="form.password" id="password" />
+          <!-- <p v-if="!passwordIsValid" class="error-message">
+            
+          </p> -->
+        </div>
+
         <div>
           <button :disabled="!formIsValid">Submit</button>
+          <button :disabled="!formIsValid">Login</button>
         </div>
       </form>
     </div>
